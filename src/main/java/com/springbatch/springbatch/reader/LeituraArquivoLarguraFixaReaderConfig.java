@@ -15,16 +15,18 @@ import org.springframework.core.io.Resource;
 public class LeituraArquivoLarguraFixaReaderConfig {
 
     private Resource inputResource = new FileSystemResource("data/202004EN.txt");
+
     @StepScope
-    @Bean
-    public FlatFileItemReader<ArquivoEntrada> leituraArquivoLarguraFixaReader(){
+    @Bean(name = "readerBean")
+    public FlatFileItemReader<ArquivoEntrada> leituraArquivoLarguraFixaReader() {
+
         FlatFileItemReaderBuilder<ArquivoEntrada> flatFileItemReader = new FlatFileItemReaderBuilder<>();
         flatFileItemReader.linesToSkip(1)
                 .name("leituraArquivoLarguraFixaReader")
                 .resource(inputResource)
                 .fixedLength()
-                .columns(new Range(1, 14),new Range(15, 83), new Range(84, 118), new Range(119, 194),new Range(195, 394),new Range(395, 414))
-                .names("CODIGO", "DESCRICAO", "TEXTO1", "TEXTO2","TEXTO3","TEXTO4")
+                .columns(new Range(1, 14), new Range(15, 83), new Range(84, 118), new Range(119, 194), new Range(195, 394), new Range(395, 414))
+                .names("CODIGO", "DESCRICAO", "TEXTO1", "TEXTO2", "TEXTO3", "TEXTO4")
                 .targetType(ArquivoEntrada.class);
 
         return flatFileItemReader.build();
