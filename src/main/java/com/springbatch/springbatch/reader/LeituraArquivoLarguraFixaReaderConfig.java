@@ -25,6 +25,7 @@ public class LeituraArquivoLarguraFixaReaderConfig {
                 .name("leituraArquivoLarguraFixaReader")
                 .resource(inputResource)
                 .fixedLength()
+                //Delimita os campos através do range
                 .columns(new Range(1, 14), new Range(15, 83), new Range(84, 118), new Range(119, 194), new Range(195, 394), new Range(395, 414))
                 .names("CODIGO", "DESCRICAO", "TEXTO1", "TEXTO2", "TEXTO3", "TEXTO4")
                 .targetType(ArquivoEntrada.class);

@@ -34,7 +34,7 @@ public class LeituraArquivoLarguraFixaStepConfig {
                 .writer(leituraArquivoLarguraFixaWriter)
                 .listener(new LoggingStepStartStopListener())
                 .taskExecutor(taskExecutor)
-                .throttleLimit(10)
+                .throttleLimit(11)
                 .build();
 
     }
