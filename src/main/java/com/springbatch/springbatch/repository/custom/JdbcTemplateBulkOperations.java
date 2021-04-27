@@ -30,12 +30,12 @@ public class JdbcTemplateBulkOperations implements BulkOperations{
             @Override
             public void setValues(PreparedStatement ps, int i) throws SQLException {
                 //ps.setLong(1, i);
-                ps.setString(1, entities.get(i).getCodigo());
-                ps.setString(2, entities.get(i).getDescricao());
-                ps.setString(3, entities.get(i).getTexto01());
-                ps.setString(4, entities.get(i).getTexto02());
-                ps.setString(5, entities.get(i).getTexto03());
-                ps.setString(6, entities.get(i).getTexto04());
+//                ps.setString(1, entities.get(i).getCodigo());
+//                ps.setString(2, entities.get(i).getDescricao());
+//                ps.setString(3, entities.get(i).getTexto01());
+//                ps.setString(4, entities.get(i).getTexto02());
+//                ps.setString(5, entities.get(i).getTexto03());
+//                ps.setString(6, entities.get(i).getTexto04());
             }
 
             @Override

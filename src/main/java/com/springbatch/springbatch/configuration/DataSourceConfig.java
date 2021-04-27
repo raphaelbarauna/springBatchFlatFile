@@ -24,9 +24,9 @@ public class DataSourceConfig {
     public DataSource springDataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("oracle.jdbc.driver.OracleDriver");
-        dataSourceBuilder.url("jdbc:oracle:thin:@localhost:1521:ORCL");
-        dataSourceBuilder.username("spring");
-        dataSourceBuilder.password("733515");
+        dataSourceBuilder.url("jdbc:oracle:thin:@10.129.195.104:1521:GFDASHQA");
+        dataSourceBuilder.username("openrisow");
+        dataSourceBuilder.password("Viv0#202l");
         return dataSourceBuilder.build();
     }
 
